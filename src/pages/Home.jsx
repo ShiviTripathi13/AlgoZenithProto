@@ -5,10 +5,11 @@ import Learn from "./Learn";
 import Forums from "./Forums";
 import Contest from "./Contest";
 import Leaderboard from "./Leaderboard";
+import Landing from "./Landing";
 
 const Home = () => {
     const [toggle, setToggle] = useState(true);
-    const [activeButton, setActiveButton] = useState('upskill');
+    const [activeButton, setActiveButton] = useState('landing');
     
 
     const handleToggle = () =>{
@@ -96,6 +97,7 @@ const Home = () => {
         </div>
 
                 <div className="m-4 w-4/5 min-h-screen"> 
+                    {activeButton === 'landing' && <Landing />}
                     {activeButton === 'dashboard' && <Dashboard />}
                     {activeButton === 'learn' && <Learn />}
                     {activeButton === 'forums' && <Forums /> }
