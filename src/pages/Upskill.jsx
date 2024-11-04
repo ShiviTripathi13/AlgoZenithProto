@@ -1,7 +1,7 @@
-import Chapters from "../menu/Chapters";
+import LearningMaterials from "./LearningMaterials";
 import { useState } from "react";
 const Upskill = () => {
-    const [learnigMaterial, setLearningMaterial] = useState(false);
+    const [learnigMaterial, setLearningMaterial] = useState(true);
     const [mentorSessions, setMentorSessions] = useState(false);
 
     const handleLearningMaterial = () => {
@@ -47,19 +47,22 @@ const Upskill = () => {
 <path d="M17.3333 21.8333H16V16.5H14.6667M16 11.1667H16.0133M28 16.5C28 18.0759 27.6896 19.6363 27.0866 21.0922C26.4835 22.5481 25.5996 23.871 24.4853 24.9853C23.371 26.0996 22.0481 26.9835 20.5922 27.5866C19.1363 28.1896 17.5759 28.5 16 28.5C14.4241 28.5 12.8637 28.1896 11.4078 27.5866C9.95189 26.9835 8.62902 26.0996 7.51472 24.9853C6.40042 23.871 5.5165 22.5481 4.91345 21.0922C4.31039 19.6363 4 18.0759 4 16.5C4 13.3174 5.26428 10.2652 7.51472 8.01472C9.76516 5.76428 12.8174 4.5 16 4.5C19.1826 4.5 22.2348 5.76428 24.4853 8.01472C26.7357 10.2652 28 13.3174 28 16.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-                    <h2 className="ml-2">How it works</h2>
+                    <button><h2 className="ml-2">How it works</h2></button>
                 </div>
             </div>
-            {learnigMaterial && (
-                <div className="flex flex-row  max-h-screen m-4 ">
-                   <div className="m-2 w-1/3 "> <Chapters /> </div>
-                   <div className="m-2 w-2/3 border border-sky-100 shadow-md rounded-md"> <Chapters/> </div>
-                </div>
-            )}
-            {mentorSessions && (
+            
+               
+            
+            {mentorSessions ? (
                 <div className="flex h-screen m-4 items-center justify-center">
                     This is a mentor session.
                 </div>
+            ) : (
+                <div className="flex flex-row  max-h-fit overflow-scroll  ">
+                <LearningMaterials/>
+                {/* // <div className="m-2 w-1/3 "> <Chapters /> </div>
+                // <div className="m-2 w-2/3 border border-sky-100 shadow-md rounded-md"> <Chapters/> </div> */}
+             </div>
             )}
         </div>
     );
