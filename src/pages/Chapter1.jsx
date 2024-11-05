@@ -32,10 +32,10 @@ const Chapter1 = () => {
     return (
         <div className="flex flex-col h-full overflow-y-scroll p-2 w-full rounded-md">
             <div className="flex flex-col">
-            <div className=" relative flex flex-row m-2 mb-0 p-2 shadow-md rounded-md border border-sky-100 ">
-                <div className="font-dm-sans">
+            <div className=" relative flex flex-col sm:flex-row m-2 mb-0 p-2 shadow-md rounded-md border border-sky-100 ">
+                <div className="font-dm-sans text-sm sm:text-base">
                     <h1>PART 1</h1>
-                    <p className="font-dm-sans font-extrabold text-sm">Lorem Ipsum Dolor Sit Amet</p>
+                    <p className="font-dm-sans font-extrabold text-2xs">Lorem Ipsum Dolor Sit Amet</p>
                 </div>
                 <div className="absolute flex top-2 right-2 ">
                     <Part1Header/>
@@ -61,9 +61,9 @@ const Chapter1 = () => {
 
             <div className="flex flex-col">
             <div className=" relative flex flex-row m-2 mb-0 p-2 shadow-md rounded-md border border-sky-100 ">
-                <div className="font-dm-sans">
+                <div className="font-dm-sans text-sm sm:text-base">
                     <h1>PART 2</h1>
-                    <p className="font-dm-sans font-extrabold text-sm">Lorem Ipsum Dolor Sit Amet</p>
+                    <p className="font-dm-sans font-extrabold text-2xs">Lorem Ipsum Dolor Sit Amet</p>
                 </div>
                 <div className="absolute flex top-2 right-2 ">
                     <Part2Header/>
@@ -89,9 +89,9 @@ const Chapter1 = () => {
 
             <div className="flex flex-col">
             <div className=" relative flex flex-row m-2 mb-0 p-2 shadow-md rounded-md border border-sky-100 ">
-                <div className="font-dm-sans">
+                <div className="font-dm-sans text-sm sm:text-base">
                     <h1>PART 3</h1>
-                    <p className="font-dm-sans font-extrabold text-sm">Lorem Ipsum Dolor Sit Amet</p>
+                    <p className="font-dm-sans font-extrabold text-2xs">Lorem Ipsum Dolor Sit Amet</p>
                 </div>
                 <div className="absolute flex top-2 right-2 ">
                     <Part3Header/>
